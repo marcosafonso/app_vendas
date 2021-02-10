@@ -1,0 +1,28 @@
+
+<!-- <ul class="nav-tabs">
+
+    <li *ngFor="let pes of pessoas">{{ pes.name }} - {{ pes.gender }} - {{ pes.birth_year }}</li>
+
+</ul> -->
+
+<p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Nome</th>
+    <th scope="col">Gênero</th>
+    <th scope="col">Ano Nascimento</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let pes of pessoas; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ pes.name }}</td>
+    <td>{{ pes.gender }}</td>
+    <td>{{ pes.birth_year }}</td>
+  </tr>
+  </tbody>
+</table>
